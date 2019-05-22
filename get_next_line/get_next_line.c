@@ -6,13 +6,13 @@
 /*   By: mathomas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/08 12:03:17 by mathomas          #+#    #+#             */
-/*   Updated: 2019/05/21 20:15:14 by mathomas         ###   ########.fr       */
+/*   Updated: 2019/05/21 20:49:03 by mathomas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "get_next_line.h"
-#include "libft/libft.h"
+#include "libft.h"
 
 static int	ft_copy(char *new, char **tab, const int fd, char **line)
 {

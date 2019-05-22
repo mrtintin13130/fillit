@@ -6,7 +6,7 @@
 /*   By: mathomas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 15:10:05 by mathomas          #+#    #+#             */
-/*   Updated: 2019/05/21 20:22:04 by mathomas         ###   ########.fr       */
+/*   Updated: 2019/05/21 20:59:37 by mathomas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,14 @@ int	check_entry(char *file)
 {
 	int 	fd;
 	int		test;
-	char	**tetr;
+	char	*tetr;
 
 	fd = open(file, O_RDONLY);
-	test = get_next_line(fd, tetr);
-	printf("%i", test);
+	while ((test = get_next_line(fd, &tetr)) > 0)
+	{
+		printf("[test: %i] - %s\n", test, tetr);
+		free(tetr);
+	}
 	return (1);
 }
 
